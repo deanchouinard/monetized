@@ -302,7 +302,7 @@ defmodule Monetized.Money do
 
       iex> Monetized.Money.from_integer(100_000, [currency: "GBP"])
       #Money<100000.00GBP>
-      #
+      
       iex> Monetized.Money.from_integer(-100, [currency: "GBP"])
       #Money<-100.00GBP>
 

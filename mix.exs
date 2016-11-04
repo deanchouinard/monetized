@@ -4,9 +4,12 @@ defmodule Monetized.Mixfile do
   def project do
     [app: :monetized,
      name: "Monetized",
-     source_url: "https://github.com/theocodes/monetized",
-     version: "0.4.0",
-     elixir: "~> 1.1",
+     #source_url: "https://github.com/theocodes/monetized",
+     source_url: "https://github.com/deanchouinard/monetized",
+     version: "0.5.0",
+     #version: "0.4.0",
+     #elixir: "~> 1.1",
+     elixir: "~> 1.3",
      description: description,
      package: package,
      build_embedded: Mix.env == :prod,
@@ -26,11 +29,15 @@ defmodule Monetized.Mixfile do
 
   defp deps do
     [
-      {:ex_doc,  "~> 0.11.5", only: :dev},
-      {:earmark, "~> 0.2.1",  only: :dev},
+      #{:ex_doc,  "~> 0.11.5", only: :dev},
+      {:ex_doc,  "~> 0.14.0", only: :dev},
+      #{:earmark, "~> 0.2.1",  only: :dev},
+      {:earmark, "~> 1.0.0",  only: :dev},
       {:inch_ex, "~> 0.5.1",  only: :docs},
-      {:decimal, "~> 1.1.2"},
-      {:ecto,    "~> 1.1.7"},
+      #{:decimal, "~> 1.1.2"},
+      {:decimal, "~> 1.2"},
+      #{:ecto,    "~> 1.1.7"},
+      {:ecto,    "~> 2.0"},
       {:benchfella, "~> 0.3.2", only: :bench},
     ]
   end
